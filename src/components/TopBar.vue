@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div class="pr-14 pl-2 my-4 flex items-center">
+  <div class="pr-20 pl-2 my-4 flex items-center">
     <span>لوگو</span>
     <div class="search inline-block border rounded-3xl w-6/12 mx-4 overflow-hidden flex">
       <input type="text" placeholder="سرچ ..." class="p-2 grow" />

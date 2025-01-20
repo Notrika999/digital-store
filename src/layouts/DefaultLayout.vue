@@ -9,7 +9,7 @@ import Footer from '@/components/Footer.vue'
     <Header />
 
     <!-- Main Content -->
-    <main class="pr-14">
+    <main class="pr-20">
       <slot />
     </main>
 
