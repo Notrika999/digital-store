@@ -3,9 +3,9 @@ import NavbarNav from "./NavbarNav.vue"
 </script>
 
 <template>
-  <div class="flex items-center justify-between px-16 bg-[#e6effd]">
+  <div class="flex items-center justify-between pr-16 pl-5 bg-[#e6effd]">
     <div class="w-2/4 pr-3">
-      <ul class="flex items-center gap-x-2 py-3">
+      <ul class="flex items-center gap-x-2 py-4">
         <NavbarNav navTitle="خانه" />
         <NavbarNav navTitle="محصولات" />
         <NavbarNav navTitle="تماس با ما" />

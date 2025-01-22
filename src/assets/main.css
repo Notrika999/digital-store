@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "./css/fonts.css";
+@import "./css/reset.css";
+
+body {
+    font-family: 'Vazir';
+    background-color: rgb(246, 246, 246);
+}
