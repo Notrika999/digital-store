@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <footer class=" py-4 mt-auto">
+  <footer class="border-t py-2 mt-6">
     <div class="flex items-start pt-14 pb-4 pr-20">
       <div class="flex items-start">
         <div class="w-80">
