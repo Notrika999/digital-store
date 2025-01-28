@@ -14,6 +14,14 @@ const router = createRouter({
       path: '/shop',
       name: 'shop',
       component: ProductsStore,
+      meta: { type: 'all' },
+    },
+    {
+      path: '/shop/:category',
+      name: 'shopCategory',
+      component: ProductsStore,
+      meta: { type: 'category' },
+      props: true,
     },
     {
       path: '/aut',

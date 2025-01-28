@@ -1,8 +1,14 @@
 <script setup>
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import ProductCard from './ProductCard.vue';
-import { useProductStore } from "@/stores/productStore"
 import 'swiper/css'
+
+defineProps({
+  products: {
+    type: Array,
+    required: true,
+  },
+})
 
 const swiperBreakpoints = {
   250: {
@@ -26,16 +32,12 @@ const swiperBreakpoints = {
     spaceBetween: 120,
   },
 }
-
-const productStore = useProductStore();
-
-const bestProducts = productStore.allProducts.filter(product => product.bestProduct);
 </script>
 
 <template>
   <div class="pr-20 pl-3 mt-5">
     <swiper :slidesPerView="1" :spaceBetween="10" :breakpoints="swiperBreakpoints" :loop="true" class="mySwiper">
-    <swiper-slide v-for="product in bestProducts" :key="product.id">
+    <swiper-slide v-for="product in products" :key="product.id">
       <ProductCard :productInfo="product" />
     </swiper-slide>
   </swiper>

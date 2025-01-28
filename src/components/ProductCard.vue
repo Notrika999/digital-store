@@ -7,18 +7,19 @@ defineProps({
     required: true
   }
 });
+
 </script>
 
 <template>
   <div
     class="flex flex-col px-3 w-64 h-[22.5rem] bg-white overflow-hidden rounded-md relative group"
   >
-    <span class="absolute mt-8 bg-red-700 px-2 rounded-3xl text-white text-sm">ویژه</span>
+    <span v-if="productInfo.bestProduct" class="absolute mt-8 bg-red-700 px-2 rounded-3xl text-white text-sm">ویژه</span>
     <span class="absolute mt-2 bg-green-700 px-2 rounded-3xl text-white text-sm">جدید</span>
 
-    <div class="mt-2 w-52 mx-auto">
+    <div class="mt-2 w-52 h-48 mx-auto">
       <a href="#">
-        <img :src="productInfo.image" :alt="productInfo.title" />
+        <img :src="productInfo.images && productInfo.images[0]" :alt="productInfo.title" />
       </a>
     </div>
 

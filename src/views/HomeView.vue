@@ -7,6 +7,18 @@ import RecommendedProducts from '@/components/RecommendedProducts.vue'
 import NewProducts from '@/components/NewProducts.vue'
 import SpecialDiscounts from '@/components/SpecialDiscounts.vue'
 import BlogSection from '@/components/BlogSection.vue'
+import { onMounted, ref } from 'vue';
+
+const bestProducts = ref([]);
+const products = ref([]);
+
+onMounted(async () => {
+  const response = await fetch("/data.json");
+  const data = await response.json();
+
+  bestProducts.value = data.products?.filter(product => product.bestProduct) || [];
+  products.value = data.products;
+});
 </script>
 
 <template>
@@ -26,10 +38,10 @@ import BlogSection from '@/components/BlogSection.vue'
     <!--  -->
 
     <!-- Best Products -->
-    <div class="bg-gradient-to-b from-blue-800 to-blue-500 py-10">
+    <div v-if="products.length" class="bg-gradient-to-b from-blue-800 to-blue-500 py-10">
       <TopSection sectionTitle="بهترین پیشنهادات" color="text-white" link="#" class="pr-20" />
 
-      <RecommendedProducts />
+      <RecommendedProducts :products="bestProducts" />
     </div>
     <!--  -->
 
@@ -55,7 +67,7 @@ import BlogSection from '@/components/BlogSection.vue'
       <div class="pr-6">
         <TopSection sectionTitle="محصولات جدید" color="text-black" link="#" />
 
-        <NewProducts />
+        <NewProducts :products="products" />
       </div>
     </div>
     <!--  -->
