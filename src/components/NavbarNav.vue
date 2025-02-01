@@ -16,6 +16,6 @@ defineProps({
 
 <template>
   <li>
-    <RouterLink :to="to" class="py-2 rounded-3xl px-3 text-[#333333] hover:text-sky-700 hover:bg-[#1c61e759] font-bold text-sm">{{ navTitle }}</RouterLink>
+    <RouterLink :to="to" class="py-2 rounded-3xl px-3 text-[#333333] hover:text-sky-700 hover:bg-[#1c61e759] font-bold text-lg">{{ navTitle }}</RouterLink>
   </li>
 </template>

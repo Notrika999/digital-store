@@ -38,7 +38,7 @@ const swiperBreakpoints = {
   <div class="pr-20 pl-3 mt-5">
     <swiper :slidesPerView="1" :spaceBetween="10" :breakpoints="swiperBreakpoints" :loop="true" class="mySwiper">
     <swiper-slide v-for="product in products" :key="product.id">
-      <ProductCard :productInfo="product" />
+      <ProductCard :productInfo="product" class="w-64" />
     </swiper-slide>
   </swiper>
   </div>

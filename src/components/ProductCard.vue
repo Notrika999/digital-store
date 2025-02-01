@@ -12,7 +12,7 @@ defineProps({
 
 <template>
   <div
-    class="flex flex-col px-3 w-64 h-[22.5rem] bg-white overflow-hidden rounded-md relative group"
+    class="flex flex-col px-3  h-[22.5rem] bg-white overflow-hidden rounded-md relative group"
   >
     <span v-if="productInfo.bestProduct" class="absolute mt-8 bg-red-700 px-2 rounded-3xl text-white text-sm">ویژه</span>
     <span class="absolute mt-2 bg-green-700 px-2 rounded-3xl text-white text-sm">جدید</span>

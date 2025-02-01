@@ -1,141 +1,116 @@
 <script setup>
-import { computed, onMounted, ref, watch } from 'vue';
-import { useRoute } from 'vue-router';
-import FilteredProducts from "@/components/FilteredProducts.vue";
-import MainCategories from '@/components/MainCategories.vue';
-import ProductCard from '@/components/ProductCard.vue';
-import SliderHomeTop from '@/components/SliderHomeTop.vue';
+import { computed, onMounted, ref, watch } from 'vue'
+import { useRoute } from 'vue-router'
+import { useProductStore } from '../stores/productStore'
+import FilteredProducts from '@/components/FiltersMain.vue'
+import ProductCard from '@/components/ProductCard.vue'
+import SliderProductsTop from '@/components/SliderProductsTop.vue'
+import SortProducts from '@/components/SortProducts.vue'
 
-// مقدار پیش‌فرض محدوده قیمت
-const priceRange = ref([0, 10000000]);
+const store = useProductStore()
+const route = useRoute()
+const sliders = ref([])
 
-// لیست محصولات
-const products = ref([]);
-const productsCategories = ref([]);
-const isFilterApplied = ref(false);
-const isLoading = ref(false);
+// دسته‌بندی جاری از آدرس دریافت شود
+const category = computed(() => route.params.category || null)
+const isCategoryPage = computed(() => route.meta.type === 'category')
 
-// دریافت اطلاعات دسته‌بندی از روت
-const route = useRoute();
-const category = computed(() => route.params.category || null);
-const isCategoryPage = computed(() => {
-  const categoryType = route.meta.type;
-  return categoryType === 'category';
-});
+// محصولات نمایش داده شده از استور دریافت می‌شوند
+const displayedProducts = computed(() => store.filteredProducts || [])
 
-// محاسبه محصولات فیلتر شده برای حالت همه محصولات
-const filteredProducts = computed(() =>
-  products.value.filter(
-    (product) =>
-      product.price >= priceRange.value[0] && product.price <= priceRange.value[1]
-  )
-);
+// لودینگ
+const isLoading = computed(() => store.isLoading)
 
-// محاسبه محصولات فیلتر شده برای حالت دسته‌بندی خاص
-const filteredCategoryProducts = computed(() =>
-  productsCategories.value.filter(
-    (product) =>
-      product.price >= priceRange.value[0] && product.price <= priceRange.value[1]
-  )
-);
+const fetchSlider = async() => {
+  sliders.value = []
+  try {
+    const response = await fetch("../../data.json");
+    const data = await response.json();
+    if (category.value) {
 
-// محصولات نهایی که باید نمایش داده شوند
-const displayedProducts = computed(() => {
-  if (!isFilterApplied.value) {
-    return isCategoryPage.value ? productsCategories.value : products.value;
+      sliders.value = data.sliders.filter((slider) => slider.category === category.value);
+    }
+  } catch (error) {
+    console.error("Error fetching sliders:", error);
   }
-  return isCategoryPage.value ? filteredCategoryProducts.value : filteredProducts.value;
-});
-
-// تابع برای به‌روزرسانی قیمت فیلتر
-const updatePriceFilter = (newRange) => {
-  priceRange.value = newRange;
-  isFilterApplied.value = true;
-};
-
-// تابع برای دریافت داده‌ها
-async function fetchData(category = null) {
-  isLoading.value = true;
-  const response = await fetch('/data.json');
-  const data = await response.json();
-
-  if (!category) {
-    products.value = data.products;
-  } else {
-    productsCategories.value = data.products.filter((product) => product.category === category);
-  }
-
-  isLoading.value = false;
-  console.log("kir khar");
 }
 
-// هنگام لود اولیه داده‌ها را بارگذاری می‌کند
+// فراخوانی داده‌ها هنگام لود صفحه و تغییر دسته‌بندی
 onMounted(() => {
-  fetchData(route.params.category);
-});
+  store.fetchProducts(category.value)
+  fetchSlider();
+})
 
-// هنگام تغییر دسته‌بندی داده‌های جدید را بارگذاری می‌کند
 watch(
-  () => route.params.category,
+  category,
   (newCategory) => {
-    isFilterApplied.value = false;
-    fetchData(newCategory);
-  }
+    store.fetchProducts(newCategory);
+    if (newCategory) {
+      fetchSlider();
+    }
+  },
+  { immediate: true } // اجرای فوری هنگام mount شدن کامپوننت
 );
 </script>
 
 <template>
   <div v-if="isLoading">در حال بارگذاری...</div>
+  <div v-else-if="error">خطا در دریافت اطلاعات</div>
   <!-- نمایش صفحه بر اساس وجود یا عدم وجود دسته‌بندی -->
-  <div>
+  <div v-else>
     <!-- حالت نمایش همه محصولات -->
-    <div v-if="!isCategoryPage">
-      <h2 class="my-3 pr-20 pl-3">دسته‌بندی‌های اصلی</h2>
-      <MainCategories class="pr-20 pl-3" />
-      <div class="flex mt-16 pl-3">
+    <div v-if="!isCategoryPage" class="mt-6">
+      <h2 class="bg-white text-xl font-bold mb-4 mr-20 ml-3 text-[#2A2A2A] py-6 pr-3 rounded-lg">
+        همه محصولات
+      </h2>
+
+      <div class="flex mt-8 pl-3">
         <!-- سایدبار فیلتر -->
-        <div class="w-1/5 ml-4 pr-20 bg-white">
-          <FilteredProducts :initialPriceRange="priceRange"
-          :onPriceChange="updatePriceFilter" />
+        <div class="ml-4 mr-20 px-6 py-4 rounded-lg bg-white xl:block hidden">
+          <FilteredProducts />
         </div>
 
         <!-- بخش اصلی لیست محصولات -->
-        <div class="flex-1">
-          <div class="flex flex-wrap justify-between gap-y-4">
-            <ProductCard v-for="product in displayedProducts" :key="product.id" :productInfo="product" />
+        <div class="flex-1 mr-20 xl:mr-0">
+          <SortProducts @sortChanged="store.applySorting" />
+
+          <div v-if="displayedProducts && displayedProducts.length === 0" class="text-gray-500">
+            محصولی یافت نشد.
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+            <ProductCard
+              v-for="product in displayedProducts"
+              :key="product.id"
+              :productInfo="product"
+            />
           </div>
         </div>
       </div>
     </div>
 
     <!-- حالت نمایش دسته‌بندی خاص -->
-    <div v-else>
-      <h2 class="text-lg font-bold mb-4 pr-20">محصولات دسته‌بندی: {{ category }}</h2>
+    <div v-else class="mt-6">
+      <h2 class="bg-white text-xl font-bold mb-4 mr-20 ml-3 text-[#2A2A2A] py-6 pr-3 rounded-lg">
+        دسته‌بندی <span class="text-[#4E5252] text-2xl">{{ store.categoryTitle }}</span>
+      </h2>
 
       <!-- نمایش اسلایدر اگر دسته‌بندی اسلایدر داشته باشد -->
-      <div>
-        <SliderHomeTop />
-      </div>
-
-      <!-- نمایش زیرمجموعه‌های دسته‌بندی -->
-      <div v-if="categoryHasSubCategories">
-        <h3 class="text-md font-semibold">زیرمجموعه‌های دسته‌بندی</h3>
-        <!-- زیرمجموعه‌های دسته‌بندی را اینجا نمایش دهید -->
+      <div v-if="sliders.length">
+        <SliderProductsTop :sliders="sliders[0]?.images" />
       </div>
 
       <!-- سکشن محصولات و فیلتر -->
-      <div class="flex mt-16 pl-3">
+      <div class="flex mt-8 pl-3">
         <!-- سایدبار فیلتر -->
-        <div class="w-1/5 ml-4 pr-24 bg-white">
-          <FilteredProducts
-            :initialPriceRange="priceRange"
-            :onPriceChange="updatePriceFilter"
-          />
+        <div class="ml-4 mr-20 px-6 py-4 rounded-lg bg-white xl:block hidden">
+          <FilteredProducts />
         </div>
 
         <!-- بخش اصلی لیست محصولات -->
-        <div class="flex-1">
-          <div class="flex flex-wrap justify-between gap-y-2">
+        <div class="flex-1 mr-20 xl:mr-0">
+          <SortProducts @sortChanged="store.applySorting" />
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
             <ProductCard
               v-for="product in displayedProducts"
               :key="product.id"

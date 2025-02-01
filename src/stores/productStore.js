@@ -1,231 +1,106 @@
 // stores/productStore.js
 import { defineStore } from 'pinia';
+import { ref, watch } from "vue";
 
-export const useProductStore = defineStore('productStore', {
-  state: () => ({
-    products: [
-      {
-        id: 1,
-        title: 'مک بوک',
-        quantity: 3,
-        category: 'laptop',
-        subCategory: 'اپل مک بوک',
-        productCode: 'G-1001',
-        rating: 5,
-        price: 116_500_000,
-        bestProduct: true,
-        discountPercentage: 10,
-        image: '../../public/images/products/macbook-pro-13-m1-2020-silver.webp',
-        creationDate: '2025-01-01',
-        description: 'این یک محصول نمونه است.',
-        technicalSpecifications: {
-          weight: '1kg',
-          dimensions: '20x30x10cm',
-          color: 'مشکی',
-          warranty: '12 ماه',
-        },
-      },
-      {
-        id: 2,
-        title: 'پردازنده اینتل Core i9',
-        quantity: 3,
-        category: 'laptop',
-        subCategory: 'پرینتر لیزری',
-        productCode: 'G-1002',
-        rating: 5,
-        price: 11_500_000,
-        bestProduct: true,
-        discountPercentage: 0,
-        image: '../../public/images/products/macbook-pro-13-m1-2020-silver.webp',
-        creationDate: '2025-01-01',
-        description: 'این یک محصول نمونه است.',
-        technicalSpecifications: {
-          weight: '1kg',
-          dimensions: '20x30x10cm',
-          color: 'مشکی',
-          warranty: '12 ماه',
-        },
-      },
-      {
-        id: 3,
-        title: 'مک بوک',
-        quantity: 3,
-        category: 'phone',
-        subCategory: 'اپل',
-        productCode: 'G-1003',
-        rating: 5,
-        price: 16_500_000,
-        bestProduct: true,
-        discountPercentage: 0,
-        image: '../../public/images/products/macbook-pro-13-m1-2020-silver.webp',
-        creationDate: '2025-01-01',
-        description: 'این یک محصول نمونه است.',
-        technicalSpecifications: {
-          weight: '1kg',
-          dimensions: '20x30x10cm',
-          color: 'مشکی',
-          warranty: '12 ماه',
-        },
-      },
-      {
-        id: 4,
-        title: 'مک',
-        quantity: 3,
-        category: 'phone',
-        subCategory: 'اپل',
-        productCode: 'G-1004',
-        rating: 5,
-        price: 116_100_000,
-        bestProduct: true,
-        discountPercentage: 10,
-        image: '../../public/images/products/macbook-pro-13-m1-2020-silver.webp',
-        creationDate: '2025-01-01',
-        description: 'این یک محصول نمونه است.',
-        technicalSpecifications: {
-          weight: '1kg',
-          dimensions: '20x30x10cm',
-          color: 'مشکی',
-          warranty: '12 ماه',
-        },
-      },
-      {
-        id: 5,
-        title: 'بوک',
-        quantity: 3,
-        category: 'phone',
-        subCategory: 'اپل',
-        productCode: 'G-1005',
-        rating: 5,
-        price: 1_500_000,
-        bestProduct: true,
-        discountPercentage: 10,
-        image: '../../public/images/products/macbook-pro-13-m1-2020-silver.webp',
-        creationDate: '2025-01-01',
-        description: 'این یک محصول نمونه است.',
-        technicalSpecifications: {
-          weight: '1kg',
-          dimensions: '20x30x10cm',
-          color: 'مشکی',
-          warranty: '12 ماه',
-        },
-      },
-      {
-        id: 6,
-        title: 'مک بوک',
-        quantity: 3,
-        category: 'phone',
-        subCategory: 'اپل',
-        productCode: 'G-1006',
-        rating: 5,
-        price: 116_500_000,
-        bestProduct: true,
-        discountPercentage: 10,
-        image: '../../public/images/products/macbook-pro-13-m1-2020-silver.webp',
-        creationDate: '2025-01-01',
-        description: 'این یک محصول نمونه است.',
-        technicalSpecifications: {
-          weight: '1kg',
-          dimensions: '20x30x10cm',
-          color: 'مشکی',
-          warranty: '12 ماه',
-        },
-      },
-      {
-        id: 7,
-        title: 'مک بوک',
-        quantity: 3,
-        category: 'phone',
-        subCategory: 'اپل',
-        productCode: 'G-1007',
-        rating: 5,
-        price: 116_500_000,
-        bestProduct: false,
-        discountPercentage: 10,
-        image: '../../public/images/products/macbook-pro-13-m1-2020-silver.webp',
-        creationDate: '2025-01-01',
-        description: 'این یک محصول نمونه است.',
-        technicalSpecifications: {
-          weight: '1kg',
-          dimensions: '20x30x10cm',
-          color: 'مشکی',
-          warranty: '12 ماه',
-        },
-      },
-      {
-        id: 8,
-        title: 'مک بوک',
-        quantity: 3,
-        category: 'laptop',
-        subCategory: 'اپل مک بوک',
-        productCode: 'G-1008',
-        rating: 5,
-        price: 116_500_000,
-        bestProduct: false,
-        discountPercentage: 10,
-        image: '../../public/images/products/macbook-pro-13-m1-2020-silver.webp',
-        creationDate: '2025-01-01',
-        description: 'این یک محصول نمونه است.',
-        technicalSpecifications: {
-          weight: '1kg',
-          dimensions: '20x30x10cm',
-          color: 'مشکی',
-          warranty: '12 ماه',
-        },
-      },
-      {
-        id: 9,
-        title: 'مک بوک',
-        quantity: 3,
-        category: 'laptop',
-        subCategory: 'اپل مک بوک',
-        productCode: 'G-1009',
-        rating: 5,
-        price: 116_500_000,
-        bestProduct: false,
-        discountPercentage: 10,
-        image: '../../public/images/products/macbook-pro-13-m1-2020-silver.webp',
-        creationDate: '2025-01-01',
-        description: 'این یک محصول نمونه است.',
-        technicalSpecifications: {
-          weight: '1kg',
-          dimensions: '20x30x10cm',
-          color: 'مشکی',
-          warranty: '12 ماه',
-        },
-      },
-      {
-        id: 10,
-        title: 'مک بوک',
-        quantity: 3,
-        category: 'laptop',
-        subCategory: 'اپل مک بوک',
-        productCode: 'G-1010',
-        rating: 5,
-        price: 116_500_000,
-        bestProduct: false,
-        discountPercentage: 10,
-        image: '../../public/images/products/macbook-pro-13-m1-2020-silver.webp',
-        creationDate: '2025-01-01',
-        description: 'این یک محصول نمونه است.',
-        technicalSpecifications: {
-          weight: '1kg',
-          dimensions: '20x30x10cm',
-          color: 'مشکی',
-          warranty: '12 ماه',
-        },
-      },
-    ],
-  }),
+export const useProductStore = defineStore("productStore", () => {
+  // ذخیره فیلترها، فیلترهای انتخاب‌شده و محصولات
+  const categoryTitle = ref("")
+  const subCategories = ref([])
+  const filters = ref({});
+  const selectedFilters = ref({});
+  const products = ref([]);
+  const filteredProducts = ref([]);
+  const isLoading = ref(false);
 
-  getters: {
-    allProducts: (state) => state.products,
-
-    productsByCategory: (cat) => {
-      return (category) => cat.products.filter(product => product.category === category);
-    },
-
-    productById: (state) => {
-      return (id) => state.products.find(product => product.id === id);
+  // دریافت فیلترها بر اساس دسته‌بندی
+  const fetchFilters = async (category) => {
+    try {
+      const response = await fetch("../../data.json");
+      const data = await response.json();
+      const categoryData = data.categories.find((cat) => cat.link === category);
+      filters.value = categoryData ? categoryData.filters : {};
+      categoryTitle.value = categoryData ? categoryData.title : {};
+      subCategories.value = categoryData ? categoryData.subCategories : [];
+      console.log("Fetched filters:", filters.value);
+    } catch (error) {
+      console.error("Error fetching filters:", error);
     }
-  }
+  };
+
+  // دریافت محصولات بر اساس دسته‌بندی
+  const fetchProducts = async (category = null) => {
+    isLoading.value = true;
+    try {
+      const response = await fetch("../../data.json");
+      const data = await response.json();
+      products.value = category
+        ? data.products.filter((product) => product.category === category)
+        : data.products;
+      applyFilters(); // اعمال فیلترها بعد از دریافت محصولات
+    } catch (error) {
+      console.error("Error fetching products:", error);
+    } finally {
+      isLoading.value = false;
+    }
+  };
+
+  // اعمال فیلترها بر روی محصولات
+  const applyFilters = () => {
+    filteredProducts.value = products.value.filter((product) =>
+      Object.entries(selectedFilters.value).every(([key, values]) => {
+        const productValue = key in product ? product[key] : product.technicalSpecifications?.[key];
+        return values.length === 0 || values.includes(productValue);
+      })
+    );
+  };
+
+  // اضافه کردن فیلتر
+  const applyFilter = (key, value) => {
+    if (value === "انتخاب کنید") {
+      Reflect.deleteProperty(selectedFilters.value, key)
+    } else {
+      selectedFilters.value[key] = value; // مقداردهی با مقدار جدید
+    }
+    applyFilters(); // اعمال فیلترها
+  };
+
+  const applySorting = (sortType) => {
+    if (sortType === "latest") {
+      products.value.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+    } else if (sortType === "priceHigh") {
+      products.value.sort((a, b) => b.price - a.price);
+    } else if (sortType === "priceLow") {
+      products.value.sort((a, b) => a.price - b.price);
+    } else if (sortType === "rating") {
+      products.value.sort((a, b) => b.rating - a.rating);
+    }
+  };
+
+
+  // حذف فیلتر
+  const removeFilter = (key, value) => {
+    selectedFilters.value[key] = selectedFilters.value[key].filter((v) => v !== value);
+    if (selectedFilters.value[key].length === 0) {
+      delete selectedFilters.value[key];
+    }
+    applyFilters();
+  };
+
+  // نظارت بر تغییرات فیلترها و اعمال آنها
+  watch(selectedFilters, applyFilters, { deep: true });
+
+  return {
+    categoryTitle,
+    subCategories,
+    filters,
+    selectedFilters,
+    products,
+    filteredProducts,
+    isLoading,
+    fetchFilters,
+    fetchProducts,
+    applyFilter,
+    applySorting,
+    removeFilter
+  };
 });
