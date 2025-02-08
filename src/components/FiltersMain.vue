@@ -1,13 +1,20 @@
 <script setup>
-import { ref, watch, computed, onMounted } from 'vue'
+import { ref, watch, computed, onMounted, defineProps, defineEmits, nextTick  } from 'vue'
 import { useRoute } from 'vue-router'
 import { useProductStore } from '../stores/productStore'
 
 const store = useProductStore()
 const route = useRoute()
+const props = defineProps({
+  modelValue: Boolean, // مقدار باید بولی باشد
+});
+// const props = defineProps(['modelValue'])
+const emit = defineEmits(['update:modelValue'])
 
 const filters = computed(() => store.filters || {})
 const selectedFilters = computed(() => store.selectedFilters)
+
+const priceRange = ref(props.modelValue ? [...props.modelValue] : [0, 10000000])
 
 const applyFilter = (key, value) => {
   if (value) store.applyFilter(key, value)
@@ -21,30 +28,24 @@ const removeFilter = (key, value) => {
 
 // دریافت دسته‌بندی از مسیر و لود فیلترها از JSON
 onMounted(() => {
-  console.log('Fetching filters for:', route.params.category)
   store.fetchFilters(route.params.category)
 })
 
 watch(
   () => route.params.category,
   (newCategory) => {
-    console.log('Category changed, fetching new filters:', newCategory)
     store.fetchFilters(newCategory)
   },
 )
 
-const props = defineProps(['modelValue'])
-const emit = defineEmits(['update:modelValue'])
-
-const priceRange = ref(props.modelValue ? [...props.modelValue] : [0, 10000000])
-
 watch(priceRange, (newValue) => {
   emit('update:modelValue', newValue)
 })
+
 </script>
 
 <template>
-  <div class="filter-container">
+  <div class="filter-container lg:static fixed  inset-0 bg-white z-10">
     <h2 class="text-lg text-[#2A2A2A] font-semibold mb-4">فیلترها</h2>
 
     <!-- بررسی مقدار filters قبل از نمایش -->

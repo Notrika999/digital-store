@@ -1,13 +1,27 @@
 <script setup>
 import { defineProps } from 'vue';
+import { useRouter } from "vue-router";
+import { useCartStore } from '@/stores/cartStore'
+const cartStore = useCartStore()
 
-defineProps({
+const props = defineProps({
   productInfo: {
     type: Object,
     required: true
   }
 });
 
+const router = useRouter();
+
+const goToProductPage = () => {
+  router.push(`/product/${props.productInfo.id}`);
+};
+
+const addToCart = () => {
+  if (props.productInfo) {
+    cartStore.addToCart(props.productInfo)
+  }
+}
 </script>
 
 <template>
@@ -18,13 +32,13 @@ defineProps({
     <span class="absolute mt-2 bg-green-700 px-2 rounded-3xl text-white text-sm">جدید</span>
 
     <div class="mt-2 w-52 h-48 mx-auto">
-      <a href="#">
+      <a href="#" @click="goToProductPage" >
         <img :src="productInfo.images && productInfo.images[0]" :alt="productInfo.title" />
       </a>
     </div>
 
     <div class="mt-6 flex items-center justify-between">
-      <a href="#" class="font-bold">{{ productInfo.title }}</a>
+      <a href="#" @click="goToProductPage"  class="font-bold">{{ productInfo.title }}</a>
       <p class="flex items-center">
         <span class="text-sm pt-1">{{ productInfo.rating }}</span>
 
@@ -47,6 +61,7 @@ defineProps({
         >{{ productInfo.price }} تومان</span
       >
       <button
+       @click="addToCart"
         class="transition-all duration-300 opacity-0 group-hover:opacity-100 border-b border-blue-800"
       >
         افزودن به سبد

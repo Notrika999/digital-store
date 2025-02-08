@@ -18,7 +18,7 @@ const isHovered = computed(() => sidebarStore.isHovered)
 
 <template>
   <div
-    class="w-16 fixed top-0 right-0 bottom-0 z-50 border border-l bg-white hover:w-60 duration-200"
+    class="w-16 fixed top-0 right-0 bottom-0 z-50 border border-l bg-white hover:w-60 duration-200 xl:inline-block hidden"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
   >

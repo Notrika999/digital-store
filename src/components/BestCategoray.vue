@@ -83,7 +83,7 @@ const bestCat = [
 </script>
 
 <template>
-  <swiper :slidesPerView="1" :spaceBetween="10" :breakpoints="swiperBreakpoints" class="mySwiper pr-20 pl-3">
+  <swiper :slidesPerView="1" :spaceBetween="10" :breakpoints="swiperBreakpoints" class="mySwiper pr-3 xl:pr-20 pl-3">
     <swiper-slide v-for="item in bestCat" :key="item.id">
       <div class="flex flex-col items-center">
         <a href="#" class="text-center group">

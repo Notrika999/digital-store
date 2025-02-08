@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import ProductsStore from '@/views/ProductsStore.vue'
+import ProductPage from '@/views/ProductPage.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -23,6 +24,7 @@ const router = createRouter({
       meta: { type: 'category' },
       props: true,
     },
+    { path: "/product/:id", component: ProductPage },
     {
       path: '/aut',
       name: 'aut',

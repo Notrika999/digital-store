@@ -6,11 +6,11 @@
       "link": "laptop",
       "icon": "<svg xmlns='http://www.w3.org/2000/svg' width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path fill=\"currentColor\" fill-rule=\"evenodd\" d=\"M8.3 3.25h7.4c.899 0 1.648 0 2.243.08c.627.084 1.194.27 1.65.725c.455.456.64 1.023.725 1.65c.08.595.08 1.345.08 2.243v7.284l1.513 1.561l.003.004l.008.007l.007.008l.006.006l.01.01l.01.011l.005.005l.008.009l.009.01l.008.01l.012.015c.372.43.703 1.074.748 1.717v.004l.003.023v.013l.002.014v.115c0 .13 0 .319-.005.4a2.75 2.75 0 0 1-2.57 2.57c-.088.006-.185.006-.311.006H4.137c-.126 0-.223 0-.31-.006a2.75 2.75 0 0 1-2.572-2.57a9 9 0 0 1-.004-.398v-.117l.001-.014v-.012l.003-.024v-.004c.046-.643.377-1.286.749-1.717l.012-.015l.008-.01l.01-.01l.007-.009l.004-.005l.011-.01l.01-.011l.005-.006l.008-.008l.007-.007l.004-.004l1.513-1.561V7.948c0-.898 0-1.648.08-2.242c.084-.628.27-1.195.725-1.65c.456-.456 1.023-.642 1.65-.726c.595-.08 1.344-.08 2.243-.08M4.67 16.286l-1.514 1.563c-.227.253-.394.626-.405.877v.223l.001.13a1.25 1.25 0 0 0 1.17 1.168c.033.003.078.003.239.003h15.678c.16 0 .206 0 .24-.003a1.25 1.25 0 0 0 1.168-1.168l.001-.035l.001-.257v-.06c-.011-.252-.178-.625-.406-.878l-1.514-1.563zm14.227-1.5V8c0-.964-.002-1.612-.067-2.095c-.062-.461-.169-.659-.3-.789s-.327-.237-.788-.3c-.483-.064-1.131-.066-2.095-.066H8.353c-.964 0-1.612.002-2.095.067c-.461.062-.659.169-.789.3s-.238.327-.3.788c-.065.483-.066 1.131-.066 2.095v6.786zM2.331 18.024l-.031-.012l.009.005zm6.419.476a.75.75 0 0 1 .75-.75h5a.75.75 0 0 1 0 1.5h-5a.75.75 0 0 1-.75-.75\" clip-rule=\"evenodd\"/> <path fill=\"currentColor\" d=\"M12.75 6.75a.75.75 0 1 1-1.5 0a.75.75 0 0 1 1.5 0\"/></svg>",
       "filters": {
-        "brand": ["اپل", "لنوو", "ایسوس"],
+        "برند": ["اپل", "لنوو", "ایسوس"],
         "cpu": ["Intel Core i5", "Intel Core i7", "AMD Ryzen 5", "AMD Ryzen 7"],
         "gpu": ["Intel UHD", "NVIDIA RTX 3060", "NVIDIA RTX 3070"],
         "ram": ["8GB", "16GB", "32GB"],
-        "storage": ["256GB SSD", "512GB SSD", "1TB SSD"],
+        "حافظه": ["256GB SSD", "512GB SSD", "1TB SSD"],
         "priceRange": ["زیر ۲۰ میلیون", "۲۰ تا ۴۰ میلیون", "بالای ۴۰ میلیون"]
       }
     },
@@ -22,7 +22,7 @@
       "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox=\"0 0 32 32\"><path fill=\"none\" stroke=\"#000\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M15 25h2M11 3h10a2 2 0 0 1 2 2v22a2 2 0 0 1-2 2H11a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2\"/></svg>",
 
       "filters": {
-        "brand": ["اپل", "سامسونگ", "شیائومی"],
+        "برند": ["اپل", "سامسونگ", "شیائومی"],
         "screenSize": ["5.5 اینچ", "6.1 اینچ", "6.5 اینچ"],
         "battery": ["4000mAh", "5000mAh", "6000mAh"],
         "camera": ["12MP", "48MP", "64MP"],
@@ -37,7 +37,7 @@
       "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"26\" height=\"26\" viewBox=\"0 0 24 24\"><path fill=\"#656565\" d=\"M3 20.5q-.425 0-.712-.288T2 19.5v-6q0-.425.288-.712T3 12.5h6q.425 0 .713.288T10 13.5v6q0 .425-.288.713T9 20.5zM14.725 10h-7.45q-.575 0-.862-.513t.012-1.012L10.15 2.4q.3-.5.85-.5t.85.5l3.725 6.075q.3.5.013 1.013t-.863.512m6.15 12.25l-1.95-1.95q-.525.35-1.137.525T16.5 21q-1.875 0-3.187-1.312T12 16.5t1.313-3.187T16.5 12t3.188 1.313T21 16.5q0 .65-.175 1.263t-.5 1.137l1.95 1.95q.275.275.275.7t-.275.7t-.7.275t-.7-.275M16.5 19q1.05 0 1.775-.725T19 16.5t-.725-1.775T16.5 14t-1.775.725T14 16.5t.725 1.775T16.5 19\"/></svg>",
 
       "filters": {
-        "brand": ["سامسونگ", "سونی", "جی بی ال"],
+        "برند": ["سامسونگ", "سونی", "جی بی ال"],
         "compatibility": ["آیفون", "سامسونگ", "شیائومی"],
         "priceRange": ["زیر ۵۰۰ هزار", "۵۰۰ تا ۱ میلیون", "بالای ۱ میلیون"]
       }
@@ -68,12 +68,12 @@
   "products": [
     {
       "id": 1,
-      "title": "گوشی هوشمند مدل X",
+      "title": "آیفون 15 پرومکس",
       "category": "mobile",
       "subCategory": "iphone",
       "images": [
-        "../../public/images/products/macbook-pro-13-m1-2020-silver.webp",
-        "../../public/images/products/macbook-pro-13-m1-2020-silver.webp"
+        "../../public/images/products/iPhone 15 Pro Natural titanium.png",
+        "../../public/images/products/هدفون-بی-سیم-سامسونگ-مدل-U-Flex.jpg.webp"
       ],
       "description": "یک گوشی هوشمند با صفحه نمایش فوق‌العاده و باتری قوی.",
       "rating": 4.7,
@@ -81,83 +81,74 @@
       "price": 1500000,
       "quantity": 50,
       "technicalSpecifications": {
-        "brand": "اپل",
-        "screenSize": "6.5 اینچ",
-        "battery": "5000 میلی‌آمپر",
-        "camera": "64 مگاپیکسل",
-        "processor": "Snapdragon 888"
+        "برند": "اپل",
+        "نمایش": "6.5 اینچ",
+        "دوربین": "64 مگاپیکسل",
+        "باطری": "5000 میلی‌آمپر",
+        "پردازنده": "Snapdragon 888"
       },
       "bestProduct": true
     },
 
     {
       "id": 2,
-      "title": " لپ‌تاپ مدل X",
+      "title": "مک بوک پرو",
       "category": "laptop",
       "subCategory": "mac",
-      "images": [
-        "../../public/images/products/iPhone 15 Pro Natural titanium.png",
-        "../../public/images/products/iPhone 15 Pro Natural titanium.png"
-      ],
+      "images": ["../../public/images/products/macbook-pro-13-m1-2020-silver.webp"],
       "description": "لپ‌تاپی قدرتمند مناسب برای بازی‌های حرفه‌ای و پردازش سنگین.",
       "rating": 4.8,
       "discount": 8,
       "price": 150000,
       "quantity": 50,
       "technicalSpecifications": {
-        "brand": "اپل",
+        "برند": "اپل",
         "cpu": "Intel Core i7",
         "gpu": "NVIDIA RTX 3070",
         "ram": "16GB DDR4",
-        "storage": "1TB SSD"
+        "حافظه": "1TB SSD"
       },
       "bestProduct": true
     },
 
     {
       "id": 21,
-      "title": " لپ‌تاپ مدل z",
+      "title": "لنوو آیپد5",
       "category": "laptop",
-      "subCategory": "mac",
-      "images": [
-        "../../public/images/products/macbook-pro-13-m1-2020-silver.webp",
-        "../../public/images/products/macbook-pro-13-m1-2020-silver.webp"
-      ],
+      "subCategory": "lenovo",
+      "images": ["../../public/images/products/lenovo-ip5-1.png"],
       "description": "لپ‌تاپی قدرتمند مناسب برای بازی‌های حرفه‌ای و پردازش سنگین.",
       "rating": 4.8,
       "discount": 8,
       "price": 150000,
       "quantity": 50,
       "technicalSpecifications": {
-        "brand": "لنوو",
+        "برند": "لنوو",
         "cpu": "Intel Core i7",
         "gpu": "NVIDIA RTX 3070",
         "ram": "16GB DDR4",
-        "storage": "1TB SSD"
+        "حافظه": "1TB SSD"
       },
       "bestProduct": true
     },
 
     {
       "id": 22,
-      "title": " لپ‌تاپ مدل y",
+      "title": "ایسوس duo 14",
       "category": "laptop",
-      "subCategory": "mac",
-      "images": [
-        "../../public/images/products/iPhone 15 Pro Natural titanium.png",
-        "../../public/images/products/iPhone 15 Pro Natural titanium.png"
-      ],
+      "subCategory": "asus",
+      "images": ["../../public/images/products/images.jpg"],
       "description": "لپ‌تاپی قدرتمند مناسب برای بازی‌های حرفه‌ای و پردازش سنگین.",
       "rating": 4.8,
       "discount": 8,
       "price": 150000,
       "quantity": 50,
       "technicalSpecifications": {
-        "brand": "ایسوس",
+        "برند": "ایسوس",
         "cpu": "Intel Core i7",
         "gpu": "NVIDIA RTX 3070",
         "ram": "16GB DDR4",
-        "storage": "1TB SSD"
+        "حافظه": "1TB SSD"
       },
       "bestProduct": true
     },
@@ -196,9 +187,8 @@
       "price": 100000,
       "quantity": 200,
       "technicalSpecifications": {
-        "material": "سیلیکون",
-        "color": "مشکی",
-        "compatibility": "مدل‌های مختلف"
+        "متریال": "سیلیکون",
+        "رنک": "مشکی"
       },
       "bestProduct": false
     },
@@ -215,9 +205,8 @@
       "price": 100000,
       "quantity": 200,
       "technicalSpecifications": {
-        "material": "سیلیکون",
-        "color": "مشکی",
-        "compatibility": "مدل‌های مختلف"
+        "متریال": "سیلیکون",
+        "رنک": "مشکی"
       },
       "bestProduct": false
     }

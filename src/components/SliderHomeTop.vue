@@ -12,26 +12,26 @@
 </script>
 
 <template>
-  <div class="pr-20 pl-3">
+  <div class="pr-3 xl:pr-20 pl-3">
     <swiper
       dir="rtl"
       :navigation="true"
       :pagination="{ clickable: true }"
       :modules="[Navigation]"
-      class="mySwiper max-w-[78rem] my-10 mx-0 rounded-xl"
+      class="mySwiper my-10 mx-0 rounded-xl"
     >
       <swiper-slide>
-        <div class="w-[78rem] h-[28rem]">
+        <div class="lg:w-[78rem] lg:h-[28rem]">
           <img src="../../public/images/slider/laptop.png" alt="" class="w-full h-full">
         </div>
       </swiper-slide>
       <swiper-slide>
-        <div class="w-[78rem] h-[28rem]">
+        <div class="lg:w-[78rem] lg:h-[28rem]">
           <img src="../../public/images/slider/airpad.jpg" alt="" class="w-full h-full">
         </div>
       </swiper-slide>
       <swiper-slide>
-        <div class="w-[78rem] h-[28rem]">
+        <div class="lg:w-[78rem] lg:h-[28rem]">
           <img src="../../public/images/slider/mobile.jpg" alt="" class="w-full h-full">
         </div>
       </swiper-slide>

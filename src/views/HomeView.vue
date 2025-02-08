@@ -32,21 +32,21 @@ onMounted(async () => {
     <!--  -->
 
     <!-- Advertise -->
-    <div class="my-16 flex justify-between items-center flex-wrap gap-y-2 pr-20 pl-3">
+    <div class="my-16 flex md:justify-between justify-center items-center flex-wrap gap-y-2 pr-3 xl:pr-20 pl-3">
       <AdverCart />
     </div>
     <!--  -->
 
     <!-- Best Products -->
     <div v-if="products.length" class="bg-gradient-to-b from-blue-800 to-blue-500 py-10">
-      <TopSection sectionTitle="بهترین پیشنهادات" color="text-white" link="#" class="pr-20" />
+      <TopSection sectionTitle="بهترین پیشنهادات" color="text-white" link="#" class="pr-3 xl:pr-20" />
 
       <RecommendedProducts :products="bestProducts" />
     </div>
     <!--  -->
 
     <!-- New Product -->
-    <div class="pr-20 pl-3 my-24 flex items-center overflow-hidden">
+    <div class="pr-3 xl:pr-20 pl-3 my-24 flex items-center overflow-hidden">
       <div
         class="hidden lg:block w-[18.75rem] py-6 px-2 rounded-md bg-gradient-to-b from-blue-950 to-neutral-800 group"
       >
@@ -73,13 +73,13 @@ onMounted(async () => {
     <!--  -->
 
     <!-- Offer -->
-    <div class="bg-gradient-to-b from-rose-100 to-sky-100 py-10 pr-20 pl-3">
+    <div class="bg-gradient-to-b from-rose-100 to-sky-100 py-10 pr-3 xl:pr-20 pl-3">
       <SpecialDiscounts />
     </div>
     <!--  -->
 
     <!-- Blog -->
-     <div class="my-20 pr-20 pl-3">
+     <div class="my-20 pr-3 xl:pr-20 pl-3">
       <TopSection sectionTitle="از وبلاگ بخوانید" color="text-black" link="#" />
 
       <BlogSection />
@@ -87,7 +87,7 @@ onMounted(async () => {
     <!--  -->
 
     <!--  -->
-    <div class="my-20 mr-20 ml-3 rounded-md bg-white p-4">
+    <div class="my-20 mr-3 xl:mr-20 ml-3 rounded-md bg-white p-4">
       <h2 class="text-xl font-bold">فروشگاه محصولات و تجهیزات الکترونیکی</h2>
       <p class="text-sm text-[#333] mt-3 mb-5">
         یک خرید اینترنتی مطمئن، نیازمند فروشگاهی است که بتواند کالاهایی متنوع، باکیفیت و دارای قیمت مناسب را در مدت زمانی کوتاه به دست مشتریان خود برساند و ضمانت بازگشت کالا هم داشته باشد؛ ویژگی‌هایی که فروشگاه اینترنتی دیجی‌کالا سال‌هاست بر روی آن‌ها کار کرده و توانسته از این طریق مشتریان ثابت خود را داشته باشد.
@@ -100,7 +100,7 @@ onMounted(async () => {
     <!--  -->
 
     <!-- News -->
-     <div class="bg-white py-10 px-20 mt-20 flex flex-col md:flex-row items-center justify-around">
+     <div class="bg-white py-10 px-20 mt-20 flex flex-col xl:flex-row items-center justify-around">
       <div class="border rounded-md">
         <input type="text" placeholder="ایمیل خود را وارد کن..." class="p-2 w-[25rem]">
         <button class="py-3 px-3 bg-blue-500 text-sm text-white rounded-l-md">عضویت در خبرنامه</button>

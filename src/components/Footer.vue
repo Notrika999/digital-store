@@ -2,7 +2,7 @@
 
 <template>
   <footer class="border-t py-2 mt-6">
-    <div class="flex items-start pt-14 pb-4 pr-20">
+    <div class="flex items-start pt-14 pb-4 pr-3 md:pr-20">
       <div class="flex items-start">
         <div class="w-80">
           <h4 class="border-b border-blue-500 pb-2 w-fit">آدرس فروشگاه</h4>

@@ -1,9 +1,9 @@
 <script setup></script>
 
 <template>
-  <div class="pr-20 pl-2 my-4 flex items-center">
+  <div class="pr-3 md:pr-20 pl-3 my-4 flex items-center">
     <span>لوگو</span>
-    <div class="search inline-block border rounded-3xl w-6/12 mx-4 overflow-hidden flex">
+    <div class="search inline-block border rounded-3xl sm:w-6/12 w-full mx-4 overflow-hidden flex">
       <input type="text" placeholder="سرچ ..." class="p-2 grow" />
       <button class="pl-4">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -18,6 +18,6 @@
         </svg>
       </button>
     </div>
-    <span class="mr-auto text-sm"> پشتیبنانی 24/7 1111-111-011 </span>
+    <span class="mr-auto text-sm sm:inline hidden "> پشتیبنانی 24/7 1111-111-011 </span>
   </div>
 </template>
