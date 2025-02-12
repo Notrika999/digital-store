@@ -1,41 +1,56 @@
-# store
+# Digital Store
 
-This template should help get you started developing with Vue 3 in Vite.
+این پروژه یک فروشگاه لوازم هوشمند است که با **Vue 3** و **Tailwind CSS** توسعه داده شده است. هدف از این پروژه، ایجاد یک تجربه کاربری سریع، بهینه و مدرن برای خرید محصولات هوشمند است.
 
-## Recommended IDE Setup
+## ویژگی‌ها ✨
+- **Vue 3 + Pinia** برای مدیریت وضعیت فروشگاه
+- **Tailwind CSS** برای استایل‌دهی سریع و ریسپانسیو
+- **کامپوننت‌های داینامیک** برای نمایش محصولات
+- **صفحه محصول** با قابلیت افزودن به سبد خرید
+- **فیلتر و دسته‌بندی محصولات**
+- **مدیریت سبد خرید**
+- **پشتیبانی از RTL** برای زبان‌های راست‌چین
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## پیش‌نیازها ⚙️
+قبل از اجرای پروژه، مطمئن شوید که موارد زیر نصب شده‌اند:
+- [Node.js](https://nodejs.org/) (نسخه 16 یا بالاتر)
+- [Vue CLI](https://cli.vuejs.org/)
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
+## نصب و اجرا 🚀
 ```sh
+# دریافت کد پروژه
+git clone https://github.com/Notrika999/digital-store.git
+
+# ورود به پوشه پروژه
+cd digital-store
+
+# نصب وابستگی‌ها
 npm install
-```
 
-### Compile and Hot-Reload for Development
-
-```sh
+# اجرای سرور محلی
 npm run dev
 ```
+پروژه در **http://localhost:5173/** اجرا خواهد شد.
 
-### Compile and Minify for Production
-
+## ساخت نسخه نهایی 🔧
 ```sh
 npm run build
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
+## ساختار پوشه‌ها 📁
+```
+digital-store/
+│── src/
+│   ├── components/    # کامپوننت‌های مشترک
+│   ├── views/         # صفحات اصلی
+│   ├── store/        # مدیریت وضعیت با Pinia
+│   ├── assets/        # تصاویر و استایل‌ها
+│   ├── router/        # تنظیمات مسیرها
+│   └── main.js        # فایل ورودی اصلی
+│── public/            # فایل‌های عمومی
+│── package.json       # تنظیمات پکیج‌ها
+│── tailwind.config.js # تنظیمات Tailwind
 ```
 
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+## توسعه‌دهنده 💡
+- **[Omid Haghi](https://github.com/Notrika999)**
