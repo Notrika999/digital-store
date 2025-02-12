@@ -1,56 +1,56 @@
 # Digital Store
 
-این پروژه یک فروشگاه لوازم هوشمند است که با **Vue 3** و **Tailwind CSS** توسعه داده شده است. هدف از این پروژه، ایجاد یک تجربه کاربری سریع، بهینه و مدرن برای خرید محصولات هوشمند است.
+This project is a smart gadgets store developed with **Vue 3** and **Tailwind CSS**. The goal of this project is to provide a fast, optimized, and modern user experience for purchasing smart products.
 
-## ویژگی‌ها ✨
-- **Vue 3 + Pinia** برای مدیریت وضعیت فروشگاه
-- **Tailwind CSS** برای استایل‌دهی سریع و ریسپانسیو
-- **کامپوننت‌های داینامیک** برای نمایش محصولات
-- **صفحه محصول** با قابلیت افزودن به سبد خرید
-- **فیلتر و دسته‌بندی محصولات**
-- **مدیریت سبد خرید**
-- **پشتیبانی از RTL** برای زبان‌های راست‌چین
+## Features ✨
+- **Vue 3 + Pinia** for state management
+- **Tailwind CSS** for fast and responsive styling
+- **Dynamic components** for product display
+- **Product page** with add-to-cart functionality
+- **Filtering and product categorization**
+- **Shopping cart management**
+- **RTL support** for right-to-left languages
 
-## پیش‌نیازها ⚙️
-قبل از اجرای پروژه، مطمئن شوید که موارد زیر نصب شده‌اند:
-- [Node.js](https://nodejs.org/) (نسخه 16 یا بالاتر)
+## Prerequisites ⚙️
+Before running the project, make sure you have the following installed:
+- [Node.js](https://nodejs.org/) (version 16 or higher)
 - [Vue CLI](https://cli.vuejs.org/)
 
-## نصب و اجرا 🚀
+## Installation and Execution 🚀
 ```sh
-# دریافت کد پروژه
+# Clone the project
 git clone https://github.com/Notrika999/digital-store.git
 
-# ورود به پوشه پروژه
+# Navigate to the project folder
 cd digital-store
 
-# نصب وابستگی‌ها
+# Install dependencies
 npm install
 
-# اجرای سرور محلی
+# Run the local server
 npm run dev
 ```
-پروژه در **http://localhost:5173/** اجرا خواهد شد.
+The project will be available at **http://localhost:5173/**.
 
-## ساخت نسخه نهایی 🔧
+## Build Production Version 🔧
 ```sh
 npm run build
 ```
 
-## ساختار پوشه‌ها 📁
+## Folder Structure 📁
 ```
 digital-store/
 │── src/
-│   ├── components/    # کامپوننت‌های مشترک
-│   ├── views/         # صفحات اصلی
-│   ├── store/        # مدیریت وضعیت با Pinia
-│   ├── assets/        # تصاویر و استایل‌ها
-│   ├── router/        # تنظیمات مسیرها
-│   └── main.js        # فایل ورودی اصلی
-│── public/            # فایل‌های عمومی
-│── package.json       # تنظیمات پکیج‌ها
-│── tailwind.config.js # تنظیمات Tailwind
+│   ├── components/    # Shared components
+│   ├── views/         # Main pages
+│   ├── store/         # State management with Pinia
+│   ├── assets/        # Images and styles
+│   ├── router/        # Routing settings
+│   └── main.js        # Main entry file
+│── public/            # Public files
+│── package.json       # Package settings
+│── tailwind.config.js # Tailwind configurations
 ```
 
-## توسعه‌دهنده 💡
+## Developer 💡
 - **[Omid Haghi](https://github.com/Notrika999)**
