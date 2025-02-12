@@ -11,34 +11,31 @@ defineProps({
 })
 
 const swiperBreakpoints = {
-  250: {
-    slidesPerView: 1,
-    spaceBetween: 10,
-  },
-  568: {
+  420: {
     slidesPerView: 2,
+    spaceBetween: 5,
+  },
+  640: {
+    slidesPerView: 3,
+    spaceBetween: 5,
+  },
+  768: {
+    slidesPerView: 4,
     spaceBetween: 10,
   },
-  878: {
-    slidesPerView: 3,
-    spaceBetween: 40,
-  },
+
   1148: {
-    slidesPerView: 4,
-    spaceBetween: 90,
-  },
-  1287: {
     slidesPerView: 5,
-    spaceBetween: 120,
+    spaceBetween: 10,
   },
 }
 </script>
 
 <template>
-  <div class="pr-20 pl-3 mt-5">
+  <div class="pr-3 xl:pr-20 pl-3 mt-5">
     <swiper :slidesPerView="1" :spaceBetween="10" :breakpoints="swiperBreakpoints" :loop="true" class="mySwiper">
     <swiper-slide v-for="product in products" :key="product.id">
-      <ProductCard :productInfo="product" class="w-64" />
+      <ProductCard :productInfo="product" />
     </swiper-slide>
   </swiper>
   </div>

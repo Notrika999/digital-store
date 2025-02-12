@@ -81,12 +81,13 @@ const closeCart = () => {
       <p>جمع کل: {{ cartTotal }} تومان</p>
       <div class="mt-4 flex justify-between items-center">
         <button @click="closeCart" class="text-red-500">بستن</button>
-        <button
+        <RouterLink
+          to="/cart"
           @click="closeCart"
-          class="w-8/12 text-white bg-blue-600 hover:bg-blue-700 py-2 rounded-md"
+          class="px-3 text-white bg-blue-600 hover:bg-blue-700 py-2 rounded-md"
         >
-          تسویه حساب
-        </button>
+           سبد خرید
+        </RouterLink>
       </div>
     </div>
   </div>

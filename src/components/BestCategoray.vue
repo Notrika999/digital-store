@@ -85,7 +85,7 @@ const bestCat = [
 <template>
   <swiper :slidesPerView="1" :spaceBetween="10" :breakpoints="swiperBreakpoints" class="mySwiper pr-3 xl:pr-20 pl-3">
     <swiper-slide v-for="item in bestCat" :key="item.id">
-      <div class="flex flex-col items-center">
+      <div class="flex flex-col items-center bg-white py-1">
         <a href="#" class="text-center group">
           <div class="rounded-full border-2 border-[#e71c59] w-40 h-40 overflow-hidden">
             <img :src="item.img" alt="img" class="transition-transform duration-500 transform group-hover:scale-105" />

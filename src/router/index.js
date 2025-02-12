@@ -2,24 +2,27 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import ProductsStore from '@/views/ProductsStore.vue'
 import ProductPage from '@/views/ProductPage.vue'
+import Cart from '@/views/Cart.vue'
+import Login from '@/views/auth/LoginView.vue'
+import ProfileView from '@/views/user/ProfileView.vue'
+import FavoritesView from '@/views/user/FavoritesView.vue'
+import SettingsView from '@/views/user/SettingsView.vue'
+import AddressView from '@/views/user/AddressView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      name: 'home',
       component: HomeView,
     },
     {
       path: '/shop',
-      name: 'shop',
       component: ProductsStore,
       meta: { type: 'all' },
     },
     {
       path: '/shop/:category',
-      name: 'shopCategory',
       component: ProductsStore,
       meta: { type: 'category' },
       props: true,
@@ -27,8 +30,27 @@ const router = createRouter({
     { path: "/product/:id", component: ProductPage },
     {
       path: '/aut',
-      name: 'aut',
-      component: () => import('../views/Authentication.vue'),
+      component: Login,
+    },
+    {
+      path: '/cart',
+      component: Cart,
+    },
+    {
+      path: '/user/profile',
+      component: ProfileView,
+    },
+    {
+      path: '/user/favorites',
+      component: FavoritesView,
+    },
+    {
+      path: '/user/settings',
+      component: SettingsView,
+    },
+    {
+      path: '/user/address',
+      component: AddressView,
     },
   ],
 })

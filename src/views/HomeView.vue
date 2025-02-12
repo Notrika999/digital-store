@@ -32,7 +32,7 @@ onMounted(async () => {
     <!--  -->
 
     <!-- Advertise -->
-    <div class="my-16 flex md:justify-between justify-center items-center flex-wrap gap-y-2 pr-3 xl:pr-20 pl-3">
+    <div class="my-16 flex lg:justify-between justify-center items-center flex-wrap gap-y-2 gap-x-4 pr-3 xl:pr-20 pl-3">
       <AdverCart />
     </div>
     <!--  -->
