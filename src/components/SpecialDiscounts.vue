@@ -11,7 +11,7 @@
     </button>
   </div>
   <div class="max:w-[38.75rem] mx-auto">
-    <img src="../../images/products/header-hero.png" alt="">
+    <img src="../../public/images/products/header-hero.png" alt="">
   </div>
 </div>
 </template>
