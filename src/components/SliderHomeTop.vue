@@ -22,17 +22,17 @@
     >
       <swiper-slide>
         <div class="lg:w-[78rem] lg:h-[28rem]">
-          <img src="../../images/slider/laptop.png" alt="" class="w-full h-full">
+          <img src="../../public/images/slider/laptop.png" alt="" class="w-full h-full">
         </div>
       </swiper-slide>
       <swiper-slide>
         <div class="lg:w-[78rem] lg:h-[28rem]">
-          <img src="../../images/slider/airpad.jpg" alt="" class="w-full h-full">
+          <img src="../../public/images/slider/airpad.jpg" alt="" class="w-full h-full">
         </div>
       </swiper-slide>
       <swiper-slide>
         <div class="lg:w-[78rem] lg:h-[28rem]">
-          <img src="../../images/slider/mobile.jpg" alt="" class="w-full h-full">
+          <img src="../../public/images/slider/mobile.jpg" alt="" class="w-full h-full">
         </div>
       </swiper-slide>
     </swiper>
