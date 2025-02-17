@@ -5,22 +5,6 @@ const props = defineProps({ productID: { type: String, required: true } })
 
 const productComments = ref([])
 
-// const comments = ref([
-//   { id: 1, user: 'کاربر ۱', text: 'این محصول عالی بود!', rating: 5, replies: [] },
-//   { id: 2, user: 'کاربر ۲', text: 'کیفیت خوبه ولی قیمتش بالاست.', rating: 4, replies: [] },
-// ])
-
-// const submitReply = (commentId) => {
-//   if (!replyText.value.trim()) return alert('لطفاً پاسخ خود را وارد کنید!')
-
-//   const comment = comments.value.find((c) => c.id === commentId)
-//   comment.replies.push({ id: Date.now(), user: 'شما', text: replyText.value })
-
-//   // پاک کردن فرم پس از ارسال
-//   replyingTo.value = null
-//   replyText.value = ''
-// }
-
 const replyingTo = ref(null)
 const replyText = ref('')
 

@@ -18,7 +18,7 @@ const props = defineProps({
 const productsSimi = ref([])
 
 const fetchComments = async () => {
-  const response = await fetch('../../data.json')
+  const response = await fetch('../../public/data/data.json')
   const data = await response.json()
   productsSimi.value = data.products.filter(
     (product) => product.subCategory == props.productSubCategory,

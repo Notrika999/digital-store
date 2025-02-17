@@ -24,7 +24,7 @@ const isLoading = computed(() => store.isLoading)
 const fetchSlider = async () => {
   sliders.value = []
   try {
-    const response = await fetch('../../data.json')
+    const response = await fetch('../../public/data/data.json')
     const data = await response.json()
     if (category.value) {
       sliders.value = data.sliders.filter((slider) => slider.category === category.value)

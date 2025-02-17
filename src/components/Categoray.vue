@@ -2,21 +2,20 @@
 import { computed, onMounted, ref } from 'vue'
 import { useSidebarStore } from '@/stores/sidebarStore'
 
-const emit = defineEmits(["close"]);
+const emit = defineEmits(['close'])
 
-const categories = ref([]);
+const categories = ref([])
 
 onMounted(async () => {
-  const response = await fetch("/data.json");
-  const data = await response.json();
+  const response = await fetch('../../public/data/data.json')
+  const data = await response.json()
 
-  categories.value = data.categories;
-});
+  categories.value = data.categories
+})
 
 const sidebarStore = useSidebarStore()
 
 const isHovered = computed(() => sidebarStore.isHovered)
-
 </script>
 
 <template>

@@ -29,7 +29,7 @@ const product = ref(null)
 const cartStore = useCartStore()
 
 const fetchProduct = async () => {
-  const response = await fetch('../../data.json')
+  const response = await fetch('../../public/data/data.json')
   const data = await response.json()
 
   product.value = data.products.find((p) => p.id == productIDRef.value)
