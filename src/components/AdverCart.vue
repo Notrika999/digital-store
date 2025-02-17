@@ -4,28 +4,28 @@ const adverObj = [
     id: 1,
     title: 'عنوان لحظات لذت بخش',
     subTitle: "از لحظه هات لذت ببر",
-    img: `../../public/images/adver/03.png`,
+    img: `../../images/adver/03.png`,
     bgColor: 'bg-gradient-to-r from-amber-500 to-amber-400'
   },
   {
     id: 2,
     title: 'ایرپاد',
     subTitle: "تخفیف تا 40%",
-    img: `../../public/images/adver/02.png`,
+    img: `../../images/adver/02.png`,
     bgColor: 'bg-gradient-to-r from-cyan-600 to-cyan-400'
   },
   {
     id: 3,
     title: 'عنوان لحظات لذت بخش',
     subTitle: "از لحظه هات لذت ببر",
-    img: `../../public/images/adver/03.png`,
+    img: `../../images/adver/03.png`,
     bgColor: 'bg-gradient-to-r from-blue-800 to-indigo-400'
   },
   {
     id: 4,
     title: 'عنوان لحظات لذت بخش',
     subTitle: "پلی استیشن",
-    img: `../../public/images/adver/02.png`,
+    img: `../../images/adver/02.png`,
     bgColor: 'bg-gradient-to-r from-rose-700 to-rose-500'
   },
 ]

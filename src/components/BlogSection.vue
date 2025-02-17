@@ -36,7 +36,7 @@ const swiperBreakpoints = {
       <swiper-slide>
         <div class="flex flex-col gap-y-3 bg-white rounded-md py-4 px-2">
           <div class="">
-            <img src="../../public/images/products/iPhone 15 Pro Natural titanium.png" alt="" />
+            <img src="../../images/products/iPhone 15 Pro Natural titanium.png" alt="" />
           </div>
           <div>
             <span class="text-[#999] text-sm"> 13 دسامبر 2022 </span>
@@ -50,7 +50,7 @@ const swiperBreakpoints = {
       <swiper-slide>
         <div class="flex flex-col gap-y-3 bg-white rounded-md py-4 px-2">
           <div class="">
-            <img src="../../public/images/products/iPhone 15 Pro Natural titanium.png" alt="" />
+            <img src="../../images/products/iPhone 15 Pro Natural titanium.png" alt="" />
           </div>
           <div>
             <span class="text-[#999] text-sm"> 13 دسامبر 2022 </span>
@@ -64,7 +64,7 @@ const swiperBreakpoints = {
       <swiper-slide>
         <div class="flex flex-col gap-y-3 bg-white rounded-md py-4 px-2">
           <div class="">
-            <img src="../../public/images/products/iPhone 15 Pro Natural titanium.png" alt="" />
+            <img src="../../images/products/iPhone 15 Pro Natural titanium.png" alt="" />
           </div>
           <div>
             <span class="text-[#999] text-sm"> 13 دسامبر 2022 </span>
@@ -78,7 +78,7 @@ const swiperBreakpoints = {
       <swiper-slide>
         <div class="flex flex-col gap-y-3 bg-white rounded-md py-4 px-2">
           <div class="">
-            <img src="../../public/images/products/iPhone 15 Pro Natural titanium.png" alt="" />
+            <img src="../../images/products/iPhone 15 Pro Natural titanium.png" alt="" />
           </div>
           <div>
             <span class="text-[#999] text-sm"> 13 دسامبر 2022 </span>
@@ -92,7 +92,7 @@ const swiperBreakpoints = {
       <swiper-slide>
         <div class="flex flex-col gap-y-3 bg-white rounded-md py-4 px-2">
           <div class="">
-            <img src="../../public/images/products/iPhone 15 Pro Natural titanium.png" alt="" />
+            <img src="../../images/products/iPhone 15 Pro Natural titanium.png" alt="" />
           </div>
           <div>
             <span class="text-[#999] text-sm"> 13 دسامبر 2022 </span>

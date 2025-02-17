@@ -7,7 +7,7 @@ const emit = defineEmits(['close'])
 const categories = ref([])
 
 onMounted(async () => {
-  const response = await fetch('../../public/data/data.json')
+  const response = await fetch('../../data/data.json')
   const data = await response.json()
 
   categories.value = data.categories

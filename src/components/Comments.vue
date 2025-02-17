@@ -14,7 +14,7 @@ const toggleReplyForm = (commentId) => {
 }
 
 const fetchComments = async () => {
-  const response = await fetch('../../data.json')
+  const response = await fetch('../../data/data.json')
   const data = await response.json()
   productComments.value = data.productsComments.find((cat) => cat.productId == props.productID)
 }

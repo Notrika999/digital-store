@@ -13,7 +13,7 @@ const bestProducts = ref([])
 const products = ref([])
 
 onMounted(async () => {
-  const response = await fetch('../../public/data/data.json')
+  const response = await fetch('../../data/data.json')
   const data = await response.json()
 
   bestProducts.value = data.products?.filter((product) => product.bestProduct) || []
@@ -65,7 +65,7 @@ onMounted(async () => {
           </button>
         </div>
         <img
-          src="../../public/images/products/iPhone 15 Pro Natural titanium.png"
+          src="../../images/products/iPhone 15 Pro Natural titanium.png"
           alt=""
           class="transition-transform duration-500 transform group-hover:scale-110"
         />

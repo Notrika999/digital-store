@@ -15,7 +15,7 @@ export const useProductStore = defineStore("productStore", () => {
   // دریافت فیلترها بر اساس دسته‌بندی
   const fetchFilters = async (category) => {
     try {
-      const response = await fetch("../../public/data/data.json");
+      const response = await fetch("../../data/data.json");
       const data = await response.json();
       const categoryData = data.categories.find((cat) => cat.link === category);
       filters.value = categoryData ? categoryData.filters : {};
@@ -31,7 +31,7 @@ export const useProductStore = defineStore("productStore", () => {
   const fetchProducts = async (category = null) => {
     isLoading.value = true;
     try {
-      const response = await fetch("../../public/data/data.json");
+      const response = await fetch("../../data/data.json");
       const data = await response.json();
       products.value = category
         ? data.products.filter((product) => product.category === category)

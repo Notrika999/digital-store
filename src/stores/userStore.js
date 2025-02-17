@@ -6,7 +6,7 @@ export const useUserStore = defineStore('user', () => {
   const user = ref({
     name: 'کاربر نمونه',
     email: 'user@example.com',
-    avatar: '../../../public/images/user/avater.jpg',
+    avatar: '../../images/user/avater.jpg',
   });
 
   const updateUser = (newUser) => {
