@@ -65,7 +65,7 @@ onMounted(async () => {
           </button>
         </div>
         <img
-          src="../../images/products/iPhone 15 Pro Natural titanium.png"
+          src="../../public/images/products/iPhone 15 Pro Natural titanium.png"
           alt=""
           class="transition-transform duration-500 transform group-hover:scale-110"
         />
