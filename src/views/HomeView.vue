@@ -55,7 +55,7 @@ onMounted(async () => {
     <!-- New Product -->
     <div v-if="products.length" class="pr-3 xl:pr-20 pl-3 my-24 flex items-center overflow-hidden">
       <div
-        class="hidden lg:block w-[18.75rem] py-6 px-2 rounded-md bg-gradient-to-b from-blue-950 to-neutral-800 group"
+        class="hidden lg:block lg:w-[18.75rem] py-6 px-2 rounded-md bg-gradient-to-b from-blue-950 to-neutral-800 group"
       >
         <div class="flex flex-col items-center gap-y-3">
           <h3 class="text-xl text-white font-bold">دریک قیمت مناسب</h3>
@@ -71,7 +71,7 @@ onMounted(async () => {
         />
       </div>
 
-      <div class="pr-6">
+      <div class="lg:max-w-[59rem] w-full pr-3 pl-3">
         <TopSection sectionTitle="محصولات جدید" color="text-black" link="#" />
 
         <NewProducts :products="products" />
