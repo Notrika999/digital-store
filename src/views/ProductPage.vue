@@ -45,7 +45,7 @@ const addToCart = () => {
 </script>
 
 <template>
-  <div v-if="product" class="mx-auto p-6 lg:mr-14">
+  <div v-if="product" class="mx-auto lg:p-6 lg:mr-14">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white rounded-md p-4">
       <div class="w-xs relative p-2 md:border-l border-b md:border-b-0">
         <swiper
